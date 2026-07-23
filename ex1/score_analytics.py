@@ -9,11 +9,12 @@ class NegativeNumber(ValueError):
 def sc_analytics() -> None:
     for arg in sys.argv[1:]:
         temp = int(arg)
-        if temp < 0:
-            raise NegativeNumber(f"Invalid parameter: '{arg}'")
         try:
-            int(arg)
-        except
+            arg
+            if temp < 0:
+                raise NegativeNumber()
+        except NegativeNumber as e:
+            print(e)
 
 
 if __name__ == "__main__":
