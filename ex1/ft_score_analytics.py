@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
 import sys
 
+
 class NegativeNumber(ValueError):
     pass
 
-def score_analytics():
+
+def score_analytics() -> None:
     print("=== Player Score Analytics ===")
     scores: list[int] = []
     for arg in sys.argv[1:]:
@@ -38,9 +40,10 @@ def score_analytics():
         print(f"Score range: {sc_range}")
     else:
         print(
-            f"No scores provided. Usage: python3 "
-            f"ft_score_analytics.py <score1> <score2> ..."
-        )
+            "No scores provided. Usage: python3 "
+            "ft_score_analytics.py <score1> <score2> ..."
+         )
+
 
 if __name__ == "__main__":
     score_analytics()
