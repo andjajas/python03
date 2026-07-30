@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 import sys
+
+
 def create_inventory() -> dict[str, int]:
     inventory: dict[str, int] = {}
     for i in sys.argv[1:]:
@@ -60,9 +62,9 @@ if __name__ == "__main__":
     name2, quantity2 = least_abundant(inventory)
     print(f"Item most abundant: {name1} with quantity {quantity1}")
     print(f"Item most abundant: {name2} with quantity {quantity2}")
-    inventory.update({"magic_item":1})
+    inventory.update({"magic_item": 1})
     print(f"Updated inventory: {inventory}")
 
 
-#command line input:
-#sword:1 potion:5 shield:2 armor:3 helmet:1 sword:2 hello key:value
+# command line input:
+# sword:1 potion:5 shield:2 armor:3 helmet:1 sword:2 hello key:value
