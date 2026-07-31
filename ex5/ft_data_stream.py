@@ -29,6 +29,7 @@ def consume_event(
 
 
 if __name__ == "__main__":
+    print("=== Game Data Stream Processor ===")
     gen = gen_event()
     for i in range(1000):
         name, action = next(gen)
