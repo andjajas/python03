@@ -16,6 +16,7 @@ def gen_player_achievements() -> set[str]:
 
 
 if __name__ == "__main__":
+    print("=== Achievement Tracker System ===\n")
     set_alice: set[str] = gen_player_achievements()
     set_bob: set[str] = gen_player_achievements()
     set_charlie: set[str] = gen_player_achievements()
