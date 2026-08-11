@@ -28,7 +28,7 @@ def item_representation() -> None:
 
 def most_abundant(inventory: dict[str, int]) -> tuple[str, int]:
     if not inventory:
-        return "", 0
+        return "None", 0
     keys = list(inventory.keys())
     most_key = keys[0]
     most_value = inventory[most_key]
@@ -41,7 +41,7 @@ def most_abundant(inventory: dict[str, int]) -> tuple[str, int]:
 
 def least_abundant(inventory: dict[str, int]) -> tuple[str, int]:
     if not inventory:
-        return "", 0
+        return "None", 0
     keys = list(inventory.keys())
     least_key = keys[0]
     least_value = inventory[least_key]
@@ -65,7 +65,7 @@ if __name__ == "__main__":
     name1, quantity1 = most_abundant(inventory)
     name2, quantity2 = least_abundant(inventory)
     print(f"Item most abundant: {name1} with quantity {quantity1}")
-    print(f"Item most abundant: {name2} with quantity {quantity2}")
+    print(f"Item least abundant: {name2} with quantity {quantity2}")
     inventory.update({"magic_item": 1})
     print(f"Updated inventory: {inventory}")
 
