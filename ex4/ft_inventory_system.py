@@ -27,6 +27,8 @@ def item_representation() -> None:
 
 
 def most_abundant(inventory: dict[str, int]) -> tuple[str, int]:
+    if not inventory:
+        return None, 0
     keys = list(inventory.keys())
     most_key = keys[0]
     most_value = inventory[most_key]
@@ -38,6 +40,8 @@ def most_abundant(inventory: dict[str, int]) -> tuple[str, int]:
 
 
 def least_abundant(inventory: dict[str, int]) -> tuple[str, int]:
+    if not inventory:
+        return None, 0
     keys = list(inventory.keys())
     least_key = keys[0]
     least_value = inventory[least_key]
